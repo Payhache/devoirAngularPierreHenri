@@ -33,10 +33,16 @@ export class PcsService {
     catchError(this.handleError)
     );
   }
-// Creation d'un message 
+// Creation d'un Pc 
 addPc(pc: Pc): Observable<Pc> {
   return this.http
     .post<Pc>(this.apiURL, pc, this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
+}
+// Edition d'un Pc existant 
+editPc(pc: Pc): Observable<Pc> {
+  return this.http
+    .put<Pc>(this.apiURL + '/' + pc.id, pc, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
 }
 

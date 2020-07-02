@@ -1,0 +1,36 @@
+
+<ng-container>
+    <h1>Changer les informations du pc</h1>
+    <p>pc-add works!</p>
+<div class="container">
+    <h1> Entre ton message !</h1>
+    <form #pcForm="ngForm" (ngSubmit)="editPc()">
+    
+        <label for="marque"> Marque du PC</label>
+        <input type="text" class="form-control" id="marque" name="marque" required [(ngModel)]="pc.marque" #marqueValidation="ngModel">
+        <div [hidden]="marqueValidation.valid"message.marque
+            class="alert alert-danger">
+            N'oublie pas de mettre un sujet !
+        </div>
+        <label for="modele">Modéle du pc</label>
+        <input type="textarea" class="form-control" id="modele" name="modele" required [(ngModel)]="pc.modele" #modeleValidation="ngModel">
+        <div [hidden]="modeleValidation.valid"
+            class="alert alert-danger">
+            vous devez remplir votre modele 
+        </div>
+
+
+        <label for="prixAchat"> Signe on te dit !</label>
+        <input type="number" class="form-control" id="prixAchat" name="prixAchat" required [(ngModel)]="pc.prixAchat" #prixAchatValidation="ngModel">
+        <div [hidden]="prixAchatValidation.valid"
+            class="alert alert-danger">
+            Le message ne dois pas être anonyme !
+        </div>
+    
+        <input type="submit" [disabled]="!pcForm.valid">
+    </form>
+
+</div>
+
+
+</ng-container>

@@ -10,6 +10,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { PcAddComponent } from './components/pc-add/pc-add.component';
 import { FormsModule } from '@angular/forms';
+import { PcEditComponent } from './components/pc-edit/pc-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     PcDetailsComponent,
     MenuComponent,
     HomeComponent,
-    PcAddComponent
+    PcAddComponent,
+    PcEditComponent
   ],
   imports: [
     BrowserModule,

@@ -27,7 +27,7 @@
         <td>{{pc.dateEntreStock | date:"dd/MM/yyyy"}}</td>
         <td> Calcule Rentabilité a faire</td>
         <button [routerLink]="['/pc', pc.id]" class="btn m-1">voir détail</button>
-        <button class="btn m-1">supprimer</button>
+        <button  [routerLink]="['/pc/edition', pc.id]"class="btn m-1">supprimer</button>
       </tr>
 
       <!-- ##### A suprimer ###### -->

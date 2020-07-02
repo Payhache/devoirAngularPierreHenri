@@ -8,6 +8,7 @@
       >€
     </p>
     <p class="dateStock"> Entrée en stock le {{pc.dateEntreStock | date:"dd/MM/yyyy"}}</p>
+    <button  [routerLink]="['/pc/edition', pc.id]"class="btn m-1">Editer les informations</button>
 </ng-container>
 
 <div class="loadMessage" *ngIf="isLoading">
