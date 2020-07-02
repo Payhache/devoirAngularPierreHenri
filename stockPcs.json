@@ -1,0 +1,24 @@
+{
+  "computers": [
+    {
+      "id": 1,
+      "modele": "Latitude 3500 - 15.6",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 120.88,
+      "prixVente": 300.10,
+      "dateEntreStock": "2012-04-23T18:25:43.511Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
