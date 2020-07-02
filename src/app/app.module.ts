@@ -9,6 +9,7 @@ import { PcDetailsComponent } from './components/pc-details/pc-details.component
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { PcAddComponent } from './components/pc-add/pc-add.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PcAddComponent } from './components/pc-add/pc-add.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PcsService } from 'src/app/services/pcs.service';
+import { Router } from '@angular/router';
+import { Pc } from 'src/app/models/pc';
 
 @Component({
   selector: 'app-pc-add',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pc-add.component.css']
 })
 export class PcAddComponent implements OnInit {
-
-  constructor() { }
+pc = new Pc();
+  constructor(public pcService:PcsService, public router:Router) { }
 
   ngOnInit(): void {
+  }
+  submitPc(): void {
+    // APPEL DE LA FONCTION addPC du PC service
+    this.pcService.addPc(this.pc).subscribe(data => {
+      this.router.navigate(['/home']);
+    });
   }
 
 }
