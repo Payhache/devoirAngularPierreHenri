@@ -10,6 +10,10 @@ import { Pc } from 'src/app/models/pc';
 })
 export class PcAddComponent implements OnInit {
 pc = new Pc();
+types = ["Portable","Fixe","Tablette hybride"];
+categories = ["Gaming", "Bureautique","Premier Prix"];
+marques = ["Dell","HP","Apple","Asus"];
+
   constructor(public pcService:PcsService, public router:Router) { }
 
   ngOnInit(): void {

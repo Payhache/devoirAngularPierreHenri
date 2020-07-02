@@ -1,28 +1,95 @@
-<p>pc-add works!</p>
+
 <div class="container">
-    <h1> Entre ton message !</h1>
+    <h1> Caractéristiques du PC </h1>
     <form #pcForm="ngForm" (ngSubmit)="submitPc()">
-    
-        <label for="marque"> Marque du PC</label>
-        <input type="text" class="form-control" id="marque" name="marque" required [(ngModel)]="pc.marque" #marqueValidation="ngModel">
-        <div [hidden]="marqueValidation.valid"message.marque
-            class="alert alert-danger">
-            N'oublie pas de mettre un sujet !
+        <!-- ##################################################################### -->
+        <!-- ###################### MARQUE DU PC ########################### -->
+        <!-- ##################################################################### -->
+        <label for="marque">Renseigner une marque</label>
+        <div *ngFor="let marque of marques">
+            <input   type="radio" id="marque" name="marque" [value]="marque" required [(ngModel)]="pc.marque"
+            #marque="ngModel">
+            <label class="radioMarque" for="marque"> {{marque}}</label>
         </div>
-        <label for="modele">Modéle du pc</label>
-        <input type="textarea" class="form-control" id="modele" name="modele" required [(ngModel)]="pc.modele" #modeleValidation="ngModel">
-        <div [hidden]="modeleValidation.valid"
-            class="alert alert-danger">
-            vous devez remplir votre modele 
-        </div>
+    <!-- /Token de vérification de la marque -->
+<!-- ###################### /MARQUE DU PC ########################### -->
+
+<!-- ##################################################################### -->
+<!-- ###################### Modele DU PC ########################### -->
+<!-- ##################################################################### -->
+<label for="modele">Modéle du PC</label>
+<input type="textarea" class="form-control" id="modele" name="modele" required [(ngModel)]="pc.modele" #modeleValidation="ngModel">
+<!-- Token de vérification de la marque -->
+<div [hidden]="modeleValidation.valid"
+class="alert alert-danger">
+vous devez remplir votre modele 
+</div>
+<!-- /Token de vérification de la marque -->
+<!-- ###################### /Modele du pc ########################### -->
+
+<!-- ##################################################################### -->
+<!-- ###################### Type du PC ########################### -->
+<!-- ##################################################################### -->
+<div class="form-row align-items-center">
+    <div class="col-auto my-1">
+        <label class="mr-sm-2" for="type">Type de PC</label>
+        <select class="custom-select mr-sm-2" id="type" required [(ngModel)]="pc.type" name="type" #type="ngModel">
+            <option *ngFor="let type of types" [value]="type"> {{type}}</option>
+        </select>
+    </div>
+</div>
+<!-- ###################### /Type du PC ########################### -->
+
+<!-- ##################################################################### -->
+<!-- #######################Catégorie du PC ################################ -->
+<!-- ##################################################################### -->
+<label for="categorie">Renseigner une catégorie</label>
+<div *ngFor="let categorie of categories">
+    <input   type="radio" id="categorie" name="categorie" [value]="categorie" required [(ngModel)]="pc.category"
+    #marque="ngModel">
+    <label class="radioMarque" for="categorie"> {{categorie}}</label>
+</div>
+<!-- ####################### /Catégorie du PC ################################ -->
+
+<!-- ##################################################################### -->
+<!-- ###################### Prix d'achat du pc########################### -->
+<!-- ##################################################################### -->
+<label for="prixAchat"> Prix d'achat du PC</label>
+<input type="number" class="form-control" id="prixAchat" name="prixAchat" required [(ngModel)]="pc.prixAchat" #prixAchatValidation="ngModel">
+<!-- Token de vérification du Prix d'achat -->
+<div [hidden]="prixAchatValidation.valid"
+class="alert alert-danger">
+Vous devez renseigner un prix d'achat !
+</div>
+<!-- /Token de vérification de la marque -->
+<!-- ###################### /Prix d'achat du pc########################### -->
+
+<!-- ##################################################################### -->
+<!-- ###################### Prix d'achat du pc########################### -->
+<!-- ##################################################################### -->
+<label for="prixVente"> Prix de vente du PC</label>
+<input type="number" class="form-control" id="prixVente" name="prixVente" required [(ngModel)]="pc.prixVente" #prixVenteValidation="ngModel">
+<!-- Token de vérification du Prix d'achat -->
+<div [hidden]="prixVenteValidation.valid"
+class="alert alert-danger">
+Vous devez renseigner un prix de vente!
+</div>
+<!-- /Token de vérification de la marque -->
+<!-- ###################### /Prix d'achat du pc########################### -->
+
+<!-- ##################################################################### -->
+<!-- ###################### Date d'entrée en stock ########################### -->
+<!-- ##################################################################### -->
+
+<label for="Date"> Date entrée en stock </label>
+<input type="Date" class="form-control" id="Date" name="Date" required [(ngModel)]="pc.dateEntreStock" #Date="ngModel">
+<div [hidden]="Date.valid"
+    class="alert alert-danger">
+    Vous devez renseigner  une date de stockage
+</div>
+<!-- ###################### /Date d'entrée en stock########################### -->
 
 
-        <label for="prixAchat"> Signe on te dit !</label>
-        <input type="number" class="form-control" id="prixAchat" name="prixAchat" required [(ngModel)]="pc.prixAchat" #prixAchatValidation="ngModel">
-        <div [hidden]="prixAchatValidation.valid"
-            class="alert alert-danger">
-            Le message ne dois pas être anonyme !
-        </div>
     
         <input type="submit" [disabled]="!pcForm.valid">
     </form>

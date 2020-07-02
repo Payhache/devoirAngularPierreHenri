@@ -9,6 +9,26 @@
       "prixAchat": 135.88,
       "prixVente": 300.1,
       "dateEntreStock": "2012-04-23T18:25:43.511Z"
+    },
+    {
+      "id": 2,
+      "modele": "super rapide",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Gaming",
+      "prixAchat": 4000,
+      "prixVente": null,
+      "dateEntreStock": null
+    },
+    {
+      "id": 3,
+      "modele": "qsdqdqssqddqs",
+      "marque": "HP",
+      "type": "Fixe",
+      "category": "Gaming",
+      "prixAchat": 350,
+      "prixVente": 5000,
+      "dateEntreStock": "2020-07-02"
     }
   ],
   "comments": [
