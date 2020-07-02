@@ -26,8 +26,16 @@
         <td>{{pc.prixVente}}</td>
         <td>{{pc.dateEntreStock | date:"dd/MM/yyyy"}}</td>
         <td> {{pc.prixVente - pc.prixAchat | number}} € </td>
-        <button [routerLink]="['/pc', pc.id]" class="btn m-1">voir détail</button>
-        <button  (click)="askDeletePc(pc.id)"class="btn m-1"> supprimer </button>
+        <button [routerLink]="['/pc', pc.id]" class="btn btn-sm btn-outline-info m-2">voir détail</button>
+        <button  (click)="openModal(template)" class="btn btn-sm btn-outline-danger m-1"> supprimer </button>
+<br><br>
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Voulez vous vraiment supprimer le PC ? </p>
+    <button type="button" class="btn btn-default" (click)="askDeletePc(pc.id)" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
       </tr>
 
     </tbody>

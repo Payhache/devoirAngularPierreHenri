@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PcsService } from 'src/app/services/pcs.service';
 import { Pc } from 'src/app/models/pc';
 
+
 @Component({
   selector: 'app-pc-edit',
   templateUrl: './pc-edit.component.html',

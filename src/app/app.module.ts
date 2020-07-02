@@ -11,6 +11,9 @@ import { HomeComponent } from './components/home/home.component';
 import { PcAddComponent } from './components/pc-add/pc-add.component';
 import { FormsModule } from '@angular/forms';
 import { PcEditComponent } from './components/pc-edit/pc-edit.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
+
 
 @NgModule({
   declarations: [
@@ -27,6 +30,7 @@ import { PcEditComponent } from './components/pc-edit/pc-edit.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ModalModule.forRoot(),
     FormsModule
   ],
   providers: [],

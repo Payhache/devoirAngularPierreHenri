@@ -12,13 +12,33 @@
     },
     {
       "id": 2,
-      "modele": "super rapide",
-      "marque": "Dell",
+      "modele": "Z500",
+      "marque": "HP",
       "type": "Portable",
       "category": "Gaming",
-      "prixAchat": 4000,
-      "prixVente": 100000,
-      "dateEntreStock": "2020-07-23"
+      "prixAchat": 530,
+      "prixVente": 900,
+      "dateEntreStock": "2020-07-01"
+    },
+    {
+      "id": 3,
+      "modele": " iMac",
+      "marque": "Apple",
+      "type": "Tablette hybride",
+      "category": "Premier Prix",
+      "prixAchat": 800,
+      "prixVente": 1500,
+      "dateEntreStock": "2020-07-15"
+    },
+    {
+      "id": 4,
+      "modele": "pkC2450",
+      "marque": "Asus",
+      "type": "Fixe",
+      "category": "Gaming",
+      "prixAchat": 800,
+      "prixVente": 2000,
+      "dateEntreStock": "2020-07-07"
     }
   ],
   "comments": [
