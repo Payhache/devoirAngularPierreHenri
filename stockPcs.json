@@ -9,16 +9,6 @@
       "prixAchat": 135.88,
       "prixVente": 300.1,
       "dateEntreStock": "2012-04-23T18:25:43.511Z"
-    },
-    {
-      "id": 2,
-      "modele": "test",
-      "marque": "test",
-      "type": null,
-      "category": null,
-      "prixAchat": 250,
-      "prixVente": null,
-      "dateEntreStock": null
     }
   ],
   "comments": [

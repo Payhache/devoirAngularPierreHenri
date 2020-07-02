@@ -45,6 +45,11 @@ editPc(pc: Pc): Observable<Pc> {
     .put<Pc>(this.apiURL + '/' + pc.id, pc, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));
 }
+// Suppression d'un Pc
+deletePc(id:number): Observable<Pc> {
+  return this.http
+  .delete<Pc>(this.apiURL + '/' + id,this.httpOptions).pipe(retry(1), catchError(this.handleError));
+}
 
   // EN cas d'erreure de communication avec le serveur
   handleError(error) {

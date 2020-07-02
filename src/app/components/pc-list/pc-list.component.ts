@@ -21,5 +21,13 @@ export class PcListComponent implements OnInit {
     });
 
   }
+  askDeletePc(id:number) {
+    this.pcService.deletePc(id).subscribe(then => {
+      this.pcService.getAllPc().subscribe((data: Pc[]) => {
+        this.pcs = data;
+        this.isLoading = false;
+      });
+    });
+  }
 
 }
