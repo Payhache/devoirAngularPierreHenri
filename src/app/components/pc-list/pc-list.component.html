@@ -1,6 +1,6 @@
 <h1>Gestion des stocks</h1>
 
-<span>Nombre de pc disponibles :  </span>
+<span>Nombre de pc disponibles : {{nbrePc}}  </span>
 <div>
   <table class="table table-striped table-dark">
     <thead>
@@ -25,7 +25,7 @@
         <td>{{pc.prixAchat}}</td>
         <td>{{pc.prixVente}}</td>
         <td>{{pc.dateEntreStock | date:"dd/MM/yyyy"}}</td>
-        <td> Calcule Rentabilité a faire</td>
+        <td> {{pc.prixVente - pc.prixAchat | number}} € </td>
         <button [routerLink]="['/pc', pc.id]" class="btn m-1">voir détail</button>
         <button  (click)="askDeletePc(pc.id)"class="btn m-1"> supprimer </button>
       </tr>

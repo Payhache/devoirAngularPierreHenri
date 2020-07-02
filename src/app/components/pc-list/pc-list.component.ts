@@ -10,6 +10,8 @@ import { Pc } from 'src/app/models/pc';
 export class PcListComponent implements OnInit {
   pcs:Pc[];
   isLoading: boolean;
+  nbrePc:number;
+
   
   constructor(private pcService:PcsService) { }
   
@@ -17,6 +19,7 @@ export class PcListComponent implements OnInit {
     this.isLoading = true;
     this.pcService.getAllPc().subscribe((data) => {
       this.pcs = data;
+      this.nbrePc = this.pcs.length
       this.isLoading = false; 
     });
 
@@ -25,6 +28,7 @@ export class PcListComponent implements OnInit {
     this.pcService.deletePc(id).subscribe(then => {
       this.pcService.getAllPc().subscribe((data: Pc[]) => {
         this.pcs = data;
+        this.nbrePc = this.pcs.length
         this.isLoading = false;
       });
     });

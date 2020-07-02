@@ -17,18 +17,8 @@
       "type": "Portable",
       "category": "Gaming",
       "prixAchat": 4000,
-      "prixVente": null,
-      "dateEntreStock": null
-    },
-    {
-      "id": 3,
-      "modele": "qsdqdqssqddqs",
-      "marque": "HP",
-      "type": "Fixe",
-      "category": "Gaming",
-      "prixAchat": 350,
-      "prixVente": 5000,
-      "dateEntreStock": "2020-07-02"
+      "prixVente": 100000,
+      "dateEntreStock": "2020-07-23"
     }
   ],
   "comments": [
