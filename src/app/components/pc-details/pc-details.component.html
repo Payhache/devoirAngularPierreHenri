@@ -1,1 +1,15 @@
-<p>pc-details works!</p>
+<ng-container *ngIf="!isLoading">
+    <h1>{{ pc.marque }} {{ pc.modele }}</h1>
+    <p>C'est un pc de type {{ pc.type }}</p>
+    <p>Ce pc est conseillé pour de la {{ pc.category }}</p>
+    <p class="prix">
+      <span>Prix d'achat {{ pc.prixAchat }} €</span> Vendu au prix de
+      <span>{{ pc.prixVente }}</span
+      >€
+    </p>
+    <p class="dateStock"> Entrée en stock le {{pc.dateEntreStock | date:"dd/MM/yyyy"}}</p>
+</ng-container>
+
+<div class="loadMessage" *ngIf="isLoading">
+    <span> En chargement....</span>
+</div>
