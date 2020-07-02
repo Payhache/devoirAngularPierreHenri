@@ -12,6 +12,10 @@ export class PcEditComponent implements OnInit {
   id: number;
   isLoading: boolean;
   pc:Pc;
+  types = ["Portable","Fixe","Tablette hybride"];
+categories = ["Gaming", "Bureautique","Premier Prix"];
+marques = ["Dell","HP","Apple","Asus"];
+
 
   constructor(
     public router: Router,

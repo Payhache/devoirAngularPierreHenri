@@ -1,6 +1,6 @@
 <h1>Gestion des stocks</h1>
 
-<span>Nombre de pc disponibles : </span>
+<span>Nombre de pc disponibles :  </span>
 <div>
   <table class="table table-striped table-dark">
     <thead>
@@ -18,7 +18,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let pc of this.pcs">
-        <th scope="row">id</th>
+        <th scope="row">{{pc.id}}</th>
         <td>{{pc.marque}}</td>
         <td>{{pc.type}}</td>
         <td>{{pc.category}}</td>
@@ -30,32 +30,6 @@
         <button  (click)="askDeletePc(pc.id)"class="btn m-1"> supprimer </button>
       </tr>
 
-      <!-- ##### A suprimer ###### -->
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <button class="btn m-1">voir détail</button>
-        <button class="btn m-1">supprimer</button>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-        <button class="btn m-1">voir détail</button>
-        <button class="btn m-1">supprimer</button>
-      </tr>
-      <!-- ##### A suprimer ###### -->
     </tbody>
   </table>
 </div>
