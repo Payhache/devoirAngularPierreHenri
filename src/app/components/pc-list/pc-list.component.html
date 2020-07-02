@@ -1,8 +1,8 @@
-<h1>Gestion des stocks</h1>
+<h1 class="text-center">Gestion des stocks</h1>
 
 <span>Nombre de pc disponibles : {{nbrePc}}  </span>
-<div>
-  <table class="table table-striped table-dark">
+<div class="m-3">
+  <table class="table table-striped table-dark w-75  m-auto">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -22,8 +22,8 @@
         <td>{{pc.marque}}</td>
         <td>{{pc.type}}</td>
         <td>{{pc.category}}</td>
-        <td>{{pc.prixAchat}}</td>
-        <td>{{pc.prixVente}}</td>
+        <td>{{pc.prixAchat}} €</td>
+        <td>{{pc.prixVente}} €</td>
         <td>{{pc.dateEntreStock | date:"dd/MM/yyyy"}}</td>
         <td> {{pc.prixVente - pc.prixAchat | number}} € </td>
         <button [routerLink]="['/pc', pc.id]" class="btn btn-sm btn-outline-info m-2">voir détail</button>
