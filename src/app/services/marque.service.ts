@@ -26,6 +26,13 @@ export class MarqueService {
       .pipe(retry(1), catchError(this.handleError));
   }
 
+  //ajout d'une marque 
+  addMarque(marque: Marque): Observable<Marque> {
+    return this.http
+    .post<Marque>(this.apiURL, marque, this.httpOptions)
+    .pipe(retry(1), catchError(this.handleError));
+  }
+  
     // EN cas d'erreure de communication avec le serveur
     handleError(error) {
       //déclaration d'une variable vide pour y associer un message d'erreur

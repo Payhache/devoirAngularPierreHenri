@@ -12,6 +12,7 @@ import { PcAddComponent } from './components/pc-add/pc-add.component';
 import { FormsModule } from '@angular/forms';
 import { PcEditComponent } from './components/pc-edit/pc-edit.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { MarqueAddComponent } from './components/marque-add/marque-add.component';
 
 
 
@@ -23,7 +24,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     MenuComponent,
     HomeComponent,
     PcAddComponent,
-    PcEditComponent
+    PcEditComponent,
+    MarqueAddComponent
   ],
   imports: [
     BrowserModule,
