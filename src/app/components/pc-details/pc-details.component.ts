@@ -11,7 +11,6 @@ import { Pc } from 'src/app/models/pc';
 export class PcDetailsComponent implements OnInit {
   isLoading: boolean;
   pc:Pc;
-  pcs:Pc[];
 
   constructor(    private route: ActivatedRoute,
     private pcService:PcsService,
@@ -23,6 +22,8 @@ export class PcDetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.pcService.getOnePc(id).subscribe((data) => {
       this.pc = data;
+      console.log(this.pc);
+      
       this.isLoading = false;
     });
 

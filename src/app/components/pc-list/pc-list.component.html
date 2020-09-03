@@ -1,13 +1,14 @@
 <h1 class="text-center">Gestion des stocks</h1>
-
-<span> Nombre de pc disponibles : {{nbrePc}}  </span>
-<div class="m-3">
-  <table class="table table-striped table-dark w-75  m-auto">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Marque</th>
-        <th scope="col">Type</th>
+<ng-container *ngIf="!isLoading">
+  
+  <span> Nombre de pc disponibles : {{nbrePc}}  </span>
+  <div class="m-3">
+    <table class="table table-striped table-dark w-75  m-auto">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Marque</th>
+          <th scope="col">Type</th>
         <th scope="col">Catégorie</th>
         <th scope="col">Prix d'achat</th>
         <th scope="col">Prix vente</th>
@@ -19,7 +20,7 @@
     <tbody>
       <tr *ngFor="let pc of this.pcs">
         <th scope="row">{{pc.id}}</th>
-        <td>{{pc.marque}}</td>
+        <td>{{pc.marque.name}}</td>
         <td>{{pc.type}}</td>
         <td>{{pc.category}}</td>
         <td>{{pc.prixAchat}} €</td>
@@ -28,16 +29,17 @@
         <td> {{pc.prixVente - pc.prixAchat | number}} € </td>
         <button [routerLink]="['/pc', pc.id]" class="btn btn-sm btn-outline-info m-2">voir détail</button>
         <button  (click)="openModal(template)" class="btn btn-sm btn-outline-danger m-1"> supprimer </button>
-<br><br>
-<ng-template #template>
-  <div class="modal-body text-center">
-    <p>Voulez vous vraiment supprimer le PC ? </p>
-    <button type="button" class="btn btn-default" (click)="askDeletePc(pc.id)" >Yes</button>
-    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
-  </div>
-</ng-template>
+        <br><br>
+        <ng-template #template>
+          <div class="modal-body text-center">
+            <p>Voulez vous vraiment supprimer le PC ? </p>
+            <button type="button" class="btn btn-default" (click)="askDeletePc(pc.id)" >Yes</button>
+            <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+          </div>
+        </ng-template>
       </tr>
-
+      
     </tbody>
   </table>
 </div>
+</ng-container>

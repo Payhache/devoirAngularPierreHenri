@@ -1,7 +1,9 @@
+import { Marque } from './marque';
+
 export class Pc {
   id: number;
   modele: string;
-  marque: string;
+  marque: Marque;
   type: string;
   category: string;
   prixAchat: number;
@@ -10,7 +12,7 @@ export class Pc {
   constructor(
     id: number = null,
     modele: string = null,
-    marque: string = null,
+    marque: Marque = null,
     type: string = null,
     category: string = null,
     prixAchat: number = null,

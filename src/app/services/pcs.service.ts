@@ -10,12 +10,13 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PcsService {
-  apiURL = 'http://localhost:3000/computers';
+  apiURL = 'http://127.0.0.1:8000/api/computers';
   httpOptions = {
     headers: new HttpHeaders({
     'Content-Type': 'application/json'
     })
-    }; 
+    };
+    
 
   constructor(private http:HttpClient) {
    }
@@ -41,6 +42,7 @@ addPc(pc: Pc): Observable<Pc> {
 }
 // Edition d'un Pc existant 
 editPc(pc: Pc): Observable<Pc> {
+  
   return this.http
     .put<Pc>(this.apiURL + '/' + pc.id, pc, this.httpOptions)
     .pipe(retry(1), catchError(this.handleError));

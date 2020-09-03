@@ -6,12 +6,16 @@
         <!-- ###################### MARQUE DU PC ########################### -->
         <!-- ##################################################################### -->
         <label for="marque">Renseigner une marque</label>
-        <div *ngFor="let marque of marques">
-            <input   type="radio" id="marque" name="marque" [value]="marque" required [(ngModel)]="pc.marque"
-            #marque="ngModel">
-            <label class="radioMarque" for="marque"> {{marque}}</label>
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="type">Marque du pc</label>
+                <select class="custom-select mr-sm-2" id="marque" required [(ngModel)]="pc.marque" name="marque" #marque="ngModel">
+                    <option *ngFor="let marque of marques" [value]="marque.id"> {{marque.name}}</option>
+                </select>
+            </div>
         </div>
-    <!-- /Token de vérification de la marque -->
+
+        <!-- /Token de vérification de la marque -->
 <!-- ###################### /MARQUE DU PC ########################### -->
 
 <!-- ##################################################################### -->
