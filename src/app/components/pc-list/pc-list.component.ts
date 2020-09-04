@@ -42,7 +42,6 @@ export class PcListComponent implements OnInit {
     this.isLoading = true;
     this.marqueService.getAllMarque().subscribe((data) => {
       this.marques = data['hydra:member'];
-      console.log(this.marques);
     })
     
     this.pcService.getAllPc().subscribe((data) => {

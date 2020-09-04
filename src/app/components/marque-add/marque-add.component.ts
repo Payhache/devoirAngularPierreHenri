@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Marque } from 'src/app/models/marque';
 import { MarqueService } from 'src/app/services/marque.service';
 import { Router } from '@angular/router';
+import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 
 @Component({
   selector: 'app-marque-add',
   templateUrl: './marque-add.component.html',
-  styleUrls: ['./marque-add.component.css']
+  styleUrls: ['./marque-add.component.css'],
+  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }]
 })
 export class MarqueAddComponent implements OnInit {
 isLoading: boolean;

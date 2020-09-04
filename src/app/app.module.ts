@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { PcEditComponent } from './components/pc-edit/pc-edit.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { MarqueAddComponent } from './components/marque-add/marque-add.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { MarqueListComponent } from './components/marque-list/marque-list.component';
 
 
 
@@ -25,12 +27,14 @@ import { MarqueAddComponent } from './components/marque-add/marque-add.component
     HomeComponent,
     PcAddComponent,
     PcEditComponent,
-    MarqueAddComponent
+    MarqueAddComponent,
+    MarqueListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    BsDropdownModule.forRoot(),
     HttpClientModule,
     ModalModule.forRoot(),
     FormsModule
